@@ -16,9 +16,12 @@ body{
    /* background-color: aliceblue; */
     background-size: cover;
     background-position:right;
+    border-bottom-left-radius:50%;
+    border-bottom-right-radius:50%;
 }
 .container{
     padding: 10px 10%;
+
 
 }
 nav
