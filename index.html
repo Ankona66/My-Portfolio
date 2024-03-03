@@ -28,8 +28,7 @@
     </div>
 </div>
 
-<!--This is a demo contemz-->
-askd
+
 <!-- ------ About Me Section -------------- -->
 <div id="about">
     <a name="aboutme"></a>
@@ -140,10 +139,11 @@ askd
                 <a href="images/Ankona Resume.pdf" download class="btn btn2"> Get my resume </a>
             </div>
             <div class="contact-right">
-                <form onsubmit="sendEmail(); reset(); return false;">
-                    <input type="text" id="Name" placeholder="Your Name" required>
-                    <input type="email" id="email" placeholder="Your Email-id" required>
-                    <textarea id="Message" rows="6" placeholder="Your Message"></textarea>
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="b54f0f39-c973-4c41-bee8-9d03f9426cfd">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email-id" required>
+                    <textarea name="message" rows="6" placeholder="Your Message"></textarea>
                     <button type="submit" class="btn btn2"> Submit </button>
                 </form>
             </div>
@@ -163,22 +163,6 @@ askd
         }
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
-    }
-</script>
-<script src="https://smtpjs.com/v3/smtp.js"></script>
-<script>
-    function sendEmail(){
-        Email.send({
-        Host : "smtp.elasticemail.com",
-        Username : "ankonasengupta97@gmail.com",
-        Password : "Ankona@1997",
-        To : 'senguptaankona19@gmail.com',
-        From : document.getElementById("email").value,
-        Subject : "Contact Form Enquiry",
-        Body : "And this is the body"
-}).then(
-  message => alert(message)
-);
     }
 </script>
 </body>
